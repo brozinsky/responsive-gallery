@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A responsive, accessible gallery component with modal video playback."
+    />
+    <title>Responsive gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="section-padding container-default">
+      <div class="main-layout">
+        <section class="main-layout">
+          <h1 class="heading-2">Snippet Heading</h1>
+          <p class="container-paragraph paragraph">
+            Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit, sed
+            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad
+            <a href="#">minim</a>
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat.
+          </p>
+        </section>
+
+        <section class="main-layout">
+          <h2 class="heading-3">Links</h2>
+          <div class="buttons-group">
+            <a href="#" class="button button--primary">
+              Link One <span class="icon icon--star icon--sm"></span>
+            </a>
+            <a href="#" class="button button--secondary">Link Two</a>
+          </div>
+        </section>
+
+        <div class="gallery">
+          <div class="gallery__image gallery__image--row-span-2">
+            <img
+              src="./src/assets/images/gallery-1.webp"
+              srcset="
+                ./src/assets/images/gallery-1.webp    1x,
+                ./src/assets/images/gallery-1@2x.webp 2x
+              "
+              width="420"
+              height="500"
+              loading="eager"
+              alt="3D green robot character flying upward through a digital space with floating elements"
+            />
+          </div>
+          <div class="gallery__image gallery__image--row-span-2">
+            <img
+              src="./src/assets/images/gallery-2.webp"
+              srcset="
+                ./src/assets/images/gallery-2.webp    1x,
+                ./src/assets/images/gallery-2@2x.webp 2x
+              "
+              width="420"
+              height="500"
+              loading="lazy"
+              alt="Group of diverse coworkers smiling and shaking hands around a meeting table"
+            />
+          </div>
+          <div class="gallery__image gallery__image--col-span-2 gallery__image--order-last">
+            <img
+              src="./src/assets/images/gallery-4.webp"
+              srcset="
+                ./src/assets/images/gallery-4.webp    1x,
+                ./src/assets/images/gallery-4@2x.webp 2x
+              "
+              sizes="(max-width: 768px) 100vw, 790px"
+              width="790"
+              height="250"
+              loading="lazy"
+              alt="A vibrant city skyline at sunset, featuring tall skyscrapers and modern buildings bathed in a warm golden light."
+            />
+          </div>
+
+          <div class="gallery__image">
+            <img
+              src="./src/assets/images/gallery-3.webp"
+              srcset="
+                ./src/assets/images/gallery-3.webp    1x,
+                ./src/assets/images/gallery-3@2x.webp 2x
+              "
+              width="420"
+              height="250"
+              loading="lazy"
+              alt="3D green robot reviewing documents with digital reviews and star ratings floating nearby in a kitchen setting"
+            />
+            <button
+              id="openModalBtn"
+              class="button button--primary button--play"
+              aria-label="Play video"
+              type="button"
+            >
+              <span class="icon icon--play"></span>
+            </button>
+          </div>
+
+          <div class="gallery__image gallery__image--row-span-2">
+            <img
+              src="./src/assets/images/gallery-5-.webp"
+              srcset="
+                ./src/assets/images/gallery-5-.webp   1x,
+                ./src/assets/images/gallery-5@2x.webp 2x
+              "
+              width="420"
+              height="500"
+              loading="lazy"
+              alt="Woman in glasses writing during a meeting."
+            />
+          </div>
+        </div>
+        <small class="small"
+          ><b>Media copyright</b> - Lorem ipsum dolor sit amet.</small
+        >
+
+        <div
+          class="modal__wrapper"
+          tabindex="-1"
+          id="modalWrapper"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modalTitle"
+          aria-describedby="modalDesc"
+        >
+          <div class="modal__backdrop"></div>
+          <div class="modal">
+            <button
+              id="closeModalBtn"
+              class="modal__close button button--danger button--circle"
+              aria-label="Close modal"
+              type="button"
+            >
+              <span class="icon icon--cross icon--white"></span>
+            </button>
+            <h2 class="heading-2" id="modalTitle">Modal Heading</h2>
+            <p class="container-paragraph paragraph" id="modalDesc">
+              Lorem ipsum dolor sit amet, <b>consectetur</b> adipiscing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad <a href="#">minim</a> veniam, quis nostrud exercitation
+              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <iframe
+              id="modalIframe"
+              class="modal__iframe"
+              width="1200"
+              height="675"
+              src=""
+              data-src="https://www.youtube.com/embed/x6iyz1AQhuU?autoplay=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+body {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-default {
+  max-width: calc(75rem + 2 * $padding-default);
+  padding-right: $padding-default;
+  padding-left: $padding-default;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container-paragraph {
+  max-width: 800px;
+}
+
+.section-padding {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

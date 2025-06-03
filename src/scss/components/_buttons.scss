@@ -1,0 +1,78 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-quaternary;
+  }
+
+  &--primary {
+    color: $color-white;
+    background: $color-primary;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &--secondary {
+    color: $color-white;
+    background: $color-secondary;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+
+  &--danger {
+    color: $color-white;
+    background: $color-danger;
+    &:hover {
+      color: $color-white;
+      background: $color-danger;
+    }
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &--circle {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  &--play {
+    @extend .button--circle;
+    padding: 0.75rem 0.81rem 0.75rem 1.06rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.buttons-group {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 1rem;
+
+  @include sm {
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,40 @@
+$heading-sizes: (
+  1: 3rem,
+  2: 2.375rem,
+  3: 2rem,
+  4: 1.75rem,
+  5: 1.5rem,
+  6: 1.125rem,
+);
+
+@mixin heading($level, $size) {
+  .heading-#{$level} {
+    font-weight: 700;
+    font-size: $size;
+    line-height: 1.1;
+  }
+}
+
+@each $level, $size in $heading-sizes {
+  @include heading($level, $size);
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.4;
+
+  a {
+    @extend .link;
+  }
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+.small {
+  font-size: 0.833rem;
+  line-height: 1.4;
+  align-self: flex-start;
+}

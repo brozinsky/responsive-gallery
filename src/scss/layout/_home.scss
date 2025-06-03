@@ -1,0 +1,10 @@
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+
+  @include sm {
+    align-items: center;
+  }
+}
