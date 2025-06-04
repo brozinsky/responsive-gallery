@@ -9,9 +9,14 @@
   line-height: 1.4;
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: $transition-default;
 
   &:hover {
     background: $color-quaternary;
+  }
+
+  &:active {
+    transform: translateY(2px);
   }
 
   &--primary {
@@ -60,6 +65,10 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    &:active {
+      transform: translateY(2px) translate(-50%, -50%);
+    }
   }
 }
 

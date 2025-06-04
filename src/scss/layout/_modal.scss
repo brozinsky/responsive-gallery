@@ -24,6 +24,7 @@
     opacity: 0;
     align-items: center;
     justify-content: center;
+    transition: $transition-default;
 
     &--active {
       visibility: visible;
